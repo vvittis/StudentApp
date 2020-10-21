@@ -1,12 +1,12 @@
-# Student App using php in Docker Containers
+# Student App using php in Docker Environment
 The purpose of this exercise is to establish communication among different services with Docker from different containers.
 The functionalities that the project offers are the above:
 1. Users (Student, Teacher) Validation and Registration 
 2. Edit, Add, Delete, Search Student by authorized Teachers
 
 **_Note:_ The functionalities in php are fairly easy to do that's why there is not an extensive analysis on them**
-### Services - Containers - Analysis of docker-compose.yml
-#### Php-Apache
+## Services - Containers - Analysis of docker-compose.yml
+### Php-Apache
 This service is responsible for containing all .php files of the project. The name of this service is website.
 In order to connect our entire project with the web(www) we use the php-apache volume (./php:/var/www/html).
 The fact that this service depends on the connected database signifies that the database(mysqli) service
@@ -30,7 +30,7 @@ build:
   ports:
     -'8080:80'
 ```
-#### MySQL
+### MySQL
 This service is responsible for managing the database system of the project. 
 I use a ready-to-use image for [MYSQL:8.0](https://hub.docker.com/_/mysql) container from Docker Hub. 
 Inside this service I have already created a database named school. This action serves that during the build of 
@@ -59,7 +59,7 @@ volumes:
   - ./php/school/data:/var/lib/mysql
 ```
 With this volume during the docker-compose up a new bind mount file is created on top of the initial database. 
-#### PhpMyAdmin
+### PhpMyAdmin
 This service is optional but non the less necessary for visualization and better monitoring of the database.
 It's exposed port is 8080 for accessing externally and port 80 for internal communication with the php as we discussed
 previously. I used a ready-to-use image from Docker Hub [PhpMyAdmin](https://hub.docker.com/_/phpmyadmin).
