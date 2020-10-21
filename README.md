@@ -50,12 +50,8 @@ previously. I used a ready-to-use image from Docker Hub [PhpMyAdmin](https://hub
 ## Requirements - Steps for use
 First of all you have to have docker and docker-compose installed in your machine. To do that: ``` sudo apt install docker docker-compose```
 
-<br \>
-
 Secondly, in the case you do ```docker image ls``` the following error will apear _"Got permission denied while
 trying to connect to the Docker daemon socket at..."_, so in order to solve it you create a new group with all the previleges ```sudo usermod -aG docker $USER``` 
-
-<br \>
 
 Lastly, you enter as a member of the new group with the following command. ```newgrp docker```
  
