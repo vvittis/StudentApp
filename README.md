@@ -18,7 +18,7 @@ php folder. In the [DockerFile](php/Dockerfile) we download both php and MySQLi,
 FROM php:7.3.3-apache
 RUN apt-get update && apt-get upgrade -y
 RUN docker-php-ext-install mysqli
-EXPOSE 80
+EXPOSE 80 
 ```
 So the exposed external port for accessing this service is 8000, and the website (php-apache)
 communicates with mysqli via port 80.
@@ -88,6 +88,7 @@ For running my project:
 If you want to test the functionalities you can enter the system with the following credentials. ```username: vas & password:123```
 
 ## Project Structure
+
 [![Image](doc/project_schema.png)
 
  
