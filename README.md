@@ -1,4 +1,7 @@
 # Student App using php in Docker Environment
+
+
+[<img src="ezgif.com-gif-maker.gif">](https://github.com/vvittis/StudentApp/blob/master/ezgif.com-gif-maker.gif)
 The purpose of this exercise is to establish communication among different services with Docker from different containers.
 The functionalities that the project offers are the above:
 1. Users (Student, Teacher) Validation and Registration 
